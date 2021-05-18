@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common LOS stuff.
-$(call inherit-product, vendor/stag/main.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from realme RMX1831
 $(call inherit-product, device/realme/RMX1831/device.mk)
@@ -35,17 +35,24 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := stag_RMX1831
+PRODUCT_NAME := aosp_RMX1831
 PRODUCT_DEVICE := RMX1831
-PRODUCT_MANUFACTURER := realme
-PRODUCT_BRAND := realme
-PRODUCT_MODEL := realme U1
+PRODUCT_MANUFACTURER := Realme
+PRODUCT_BRAND := Realme
+PRODUCT_MODEL := RMX1831
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 TARGET_VENDOR := realme
 
 TARGET_VENDOR_PRODUCT_NAME := RMX1831
 TARGET_VENDOR_DEVICE_NAME := RMX1831
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ppui.device_name=realme U1 \
+ro.ppui.version=3.5 \
+ro.ppui.version_code=Jasper \
+ro.ppui.is_official=true \
+ro.ppui.maintainer_name=Radeon
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="RMX1831" \
