@@ -4,9 +4,6 @@ lib/libshowlogo.so
 lib/libsysenv_system.so
 lib64/libsysenv_system.so
 vendor/lib64/libmtk-ril.so:lib64/libmtk-ril.so
-lib64/android.hardware.health@2.0.so
-lib/libsuspend.so
-lib64/libsuspend.so
 # MTK-IMS
 -framework/mediatek-common.jar
 -framework/mediatek-framework.jar
